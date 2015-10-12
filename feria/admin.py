@@ -8,5 +8,4 @@ class franquiciaadmin(admin.ModelAdmin):
 	list_display = ('nombre','descripcion','activo')
 	list_filter = ['activo']
 
-
 admin.site.register(franquicia,franquiciaadmin)
