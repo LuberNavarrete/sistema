@@ -1,2 +1,6 @@
 django
 django-admin-bootstrapped
+
+apt-get install libjpeg-dev
+apt-get install zlib1g-dev
+pip install pillow
