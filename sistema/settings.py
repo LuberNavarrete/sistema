@@ -103,3 +103,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#Configuracion de archivos estaticos en Django
+STATICFILES_DIRS = (
+	os.path.join(BASE_DIR, 'static'),
+)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+
