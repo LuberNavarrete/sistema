@@ -6,10 +6,15 @@ class franquicia(models.Model):
 	imagen =models.ImageField(upload_to='imagenes', null = True)
 	activo = models.BooleanField(default = 'true')
 
+	def __str__(self):
+		return self.nombre
+
 class producto(models.Model):
-	franquicia = models.foreingkey(franquicia,limit_choices_to={'activo': True})
+	franquicia = models.ForeignKey(franquicia,limit_choices_to={'activo': True})
         nombre = models.CharField(max_length=50)
         descripcion = models.TextField(max_length=200)
         imagen =models.ImageField(upload_to='imagenes', null = True)
         activo = models.BooleanField(default = 'true')
 
+	def __str__(self):
+		return self.nombre
