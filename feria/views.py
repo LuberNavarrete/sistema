@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from models import franquicia
 
-def home(request):
-        return render(request, 'home.html')
+class HomeView(ListView):
+        template_name = 'home.html'
+	model = franquicia
+	context_object_name = 'franquicias'

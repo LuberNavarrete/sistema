@@ -7,8 +7,11 @@
 		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 	</head>
 	<body>
-		<h1>Esto es un titulo</h1>
-		<p>Un parrafo</p>
-		<p>Otro parrafo</p>
+		{% for franquicia in franquicias %}
+    			<h2>{{ franquicia.nombre }}</h2>
+    			<div class="article-info">
+        			<small> {{ franquicia.descripcion }}</small><hr>
+    			</div>
+		{% endfor %}
 	</body>
 </html>
