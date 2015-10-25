@@ -1,4 +1,62 @@
 {% load staticfiles %}
+<!DOCTYPE html>
+<html lang "es">
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+		<title>Pantilla</title>
+		<link rel = "stylesheet" href = "{% static 'css/bootstrap.min.css' %}">
+	</head>
+	<body>		
+		<nav class = "navbar navbar-inverse" role = "navigation">
+			<div class = "container-fluid">
+				<div class = "navbar-header">
+					<button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#acolapsar">
+						<span class = "sr-only"></span>
+						<span class = "icon-bar"></span>
+						<span class = "icon-bar"></span>
+						<span class = "icon-bar"></span>	
+					</button>
+					<a href = "#" class = "navbar-brand">Base</a>
+				</div>
+				<div class = "collapse navbar-collapse" id = "acolapsar">
+					<ul class = "nav navbar-nav">
+						<li><a href = "#"><span class = "glyphicon glyphicon-home"></span> Inicio</a></li>
+						<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Opciones</a></li>
+						
+						<li class = "dropdown">
+							<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Reportes<b class = "caret"></b></a>
+							<ul class = "dropdown-menu">
+								<li><a href = "#">Link 1</a></li>
+								<li><a href = "#">Link 2</a></li>
+								<li><a href = "#">Link 3</a></li>
+								<li><a href = "#">Link 4</a></li>
+								<li><a href = "#">Link 5</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		{% for franquicia in franquicias %}
+    			<h2>{{ franquicia.nombre }}</h2>
+    			<div class="article-info">
+        			<small> {{ franquicia.descripcion }}</small><hr>
+    			</div>
+		{% endfor %}
+	
+		<script src = "{% static 'js/jquery.js' %}"></script>
+		<script src = "{% static 'js/bootstrap.min.js' %}"></script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
 <html>
 	<head>
 		<title>
@@ -7,11 +65,6 @@
 		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 	</head>
 	<body>
-		{% for franquicia in franquicias %}
-    			<h2>{{ franquicia.nombre }}</h2>
-    			<div class="article-info">
-        			<small> {{ franquicia.descripcion }}</small><hr>
-    			</div>
-		{% endfor %}
+		
 	</body>
 </html>
