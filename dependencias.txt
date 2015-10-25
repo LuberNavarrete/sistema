@@ -3,5 +3,4 @@ django-admin-bootstrapped
 install pillow
 
 ## Estas deben de pertenecer al sistema Host
-# apt-get install libjpeg-dev
-# apt-get install zlib1g-dev
+# apt-get install libjpeg-dev zlib1g-dev

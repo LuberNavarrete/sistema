@@ -13,6 +13,7 @@ class producto(models.Model):
 	franquicia = models.ForeignKey(franquicia,limit_choices_to={'activo': True})
         nombre = models.CharField(max_length=50)
         descripcion = models.TextField(max_length=200)
+	precio = models.FloatField(default = 0)
         imagen =models.ImageField(upload_to='imagenes', null = True)
         activo = models.BooleanField(default = 'true')
 
