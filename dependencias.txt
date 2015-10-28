@@ -1,6 +1,5 @@
-django
-django-admin-bootstrapped
-install pillow
-
-## Estas deben de pertenecer al sistema Host
-# apt-get install libjpeg-dev zlib1g-dev
+Django==1.8.5
+Pillow==3.0.0
+argparse==1.2.1
+django-admin-bootstrapped==2.5.6
+wsgiref==0.1.2
