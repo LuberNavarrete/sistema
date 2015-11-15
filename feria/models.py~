@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class franquicia(models.Model):
 	nombre = models.CharField(max_length=50)
@@ -6,6 +7,7 @@ class franquicia(models.Model):
 	imagen = models.ImageField(upload_to='imagenes', null = True)
 	creado = models.DateTimeField(auto_now_add = True, editable=False)
 	modificado = models.DateTimeField(auto_now = True, editable=False)
+	propietario = models.OneToOneField(User)
 	activo = models.BooleanField(default = 'true')
 
 	def __str__(self):
@@ -19,6 +21,7 @@ class producto(models.Model):
         imagen = models.ImageField(upload_to='imagenes', null = True)
 	creado = models.DateTimeField(auto_now_add = True, editable=False)
 	modificado = models.DateTimeField(auto_now = True, editable=False)
+	propietario = models.OneToOneField(User)
 	activo = models.BooleanField(default = 'true')
 
 	def __str__(self):
